@@ -17,21 +17,28 @@
                 </div>
                 @endif
                 <a href="{{route('category.index')}} " class="btn btn-success">Liet ke danh muc</a>
-                <form>
+                <form action="{{route('category.store')}}" method="POST" enctype="multipart/form-data">
+                    @csrf
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        <label>Title</label>
+                        <input type="text" class="form-control" required name="title" placeholder="...">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <label>Image</label>
+                        <input type="file" class="form-control" required name="image">
                     </div>
-                    <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    <div class="form-group">
+                        <label >Description</label>
+                        <textarea class="form-control" required name="description"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class="form-group">
+                        <label>Example select</label>
+                        <select class="form-control" required name="status">
+                            <option value="0">Hiển thị</option>
+                            <option value="1">Không hiển thị</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add</button>
                 </form>
             </div>
         </div>

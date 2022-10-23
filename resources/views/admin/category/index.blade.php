@@ -21,23 +21,37 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th scope="col">Id</th>
-                            <th scope="col">Tên danh mục</th>
-                            <th scope="col">Mô tả</th>
-                            <th scope="col">Hiển thị</th>
-                            <th scope="col">Hình ảnh</th>
-                            <th scope="col">Thứ tự</th>
+                            <th>ID</th>
+                            <th>Tên danh mục</th>
+                            <th>Mô tả</th>
+                            <th>Hiển thị</th>
+                            <th>Hình ảnh</th>
+                            <th>Quản lý</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach($category as $key => $cate)
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
+                            <th>{{$key}}</th>
+                            <td>{{$cate->title}}</td>
+                            <td>{{$cate->description}}</td>
+                            <td>
+                                @if($cate->status == 0)
+                                Khong hien thi
+                                @else
+                                Hien thi
+                                @endif
+                            </td>
+                            <td><img src="{{asset('uploads/category/'.$cate->image)}}" height="150px" weight="150px"></td>
+                            <td>
+                                <form action="{{route('category.destroy',$cate->id)}}" method="POST">
+                                    @method('DELETE')
+                                    @csrf
+                                    <button onclick="return confirm('Ban co muon xoa');" class="btn btn-danger">Delete</button>
+                                </form>
+                                <a href="{{route('category.edit',$cate->id)}}" class="btn btn-warning">Sửa</a>
+                            </td>
                         </tr>
                         @endforeach
                     </tbody>
