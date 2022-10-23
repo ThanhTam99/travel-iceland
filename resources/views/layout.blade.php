@@ -38,23 +38,19 @@
     <link href="{{asset('frontend/css/jquery.fancybox.css')}}" rel="stylesheet" type="text/css" />
     <!-- END: BASE PLUGINS -->
     <!-- BEGIN: PAGE STYLES -->
-    <link href="{{asset('frontend/css/bootstrap-datepicker.min.css')}}"
-         rel="stylesheet" type="text/css"/>
-      <link href="{{asset('frontend/css/bootstrap-datepicker3.min.css')}}"
-         rel="stylesheet" type="text/css"/>
-      <link href="{{asset('frontend/css/bootstrap-timepicker.min.css')}}"
-         rel="stylesheet" type="text/css"/>
-      <link href="{{asset('frontend/css/bootstrap-datetimepicker.min.css')}}"
-         rel="stylesheet" type="text/css"/>
-      <!-- END: PAGE STYLES -->
-      <!-- BEGIN THEME STYLES -->
-      <link href="{{asset('frontend/css/plugins.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('frontend/css/bootstrap-datepicker.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('frontend/css/bootstrap-datepicker3.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('frontend/css/bootstrap-timepicker.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('frontend/css/bootstrap-datetimepicker.min.css')}}" rel="stylesheet" type="text/css" />
+    <!-- END: PAGE STYLES -->
+    <!-- BEGIN THEME STYLES -->
+    <link href="{{asset('frontend/css/plugins.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('frontend/css/components.css')}}" id="style_components" rel="stylesheet" type="text/css" />
     <link href="{{asset('frontend/css/default.css')}}" rel="stylesheet" id="style_theme" type="text/css" />
     <link href="{{asset('frontend/css/custom.css')}}" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/owl.theme.css">
-    <link rel="stylesheet" href="css/owl.transitions.css">
+    <link rel="stylesheet" href="{{asset('frontend/css/owl.carousel.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/owl.theme.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/owl.transitions.css')}}">
 
     <link href="{{asset('frontend/css/style.css?v=165028560171931')}}" rel="stylesheet" type="text/css" />
     <!-- END THEME STYLES -->
@@ -64,7 +60,7 @@
     <script src="{{asset('frontend/js/owl-carousel/slider.js')}}"></script>
     <script src="{{asset('frontend/js/jquery-cookie/jquery.cookie.js')}}"></script>
     <script src="{{asset('frontend/js/jquery-migrate.min.js')}}" type="text/javascript"></script>
-    <!--  <script src="js/bootstrap.min.js" type="text/javascript"></script> -->
+    <!--  <script src="{{asset('frontend/js/bootstrap.min.js')}}" type="text/javascript"></script> -->
     <style>
         .c-layout-header .c-navbar .c-mega-menu>.nav.navbar-nav>li>.c-link {
             padding: 41px 10px 39px 10px
@@ -139,7 +135,7 @@
             z-index: 7 !important;
         }
     </style>
-    <link href="css/magnific.css" rel="stylesheet" type="text/css" />
+    <link href="{{asset('frontend/css/magnific.css')}}" rel="stylesheet" type="text/css" />
     <!--<script src='https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js'></script><link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css'>-->
     <!-- Google Tag Manager -->
 
@@ -360,894 +356,10 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Main -->
+        @yield('content')
 
-        <div class="c-content-box c-size-md c-bg-white">
-            <div class="container">
-                <!-- Begin: Testimonals 1 component -->
-                <div class="c-content-client-logos-slider-1  c-bordered" data-slider="owl">
-                    <!-- Begin: Title 1 component -->
-                    <div class="c-content-title-1">
-                        <h3 class="c-center c-font-uppercase c-font-bold">Dịch vụ nổi bật</h3>
-                        <div class="c-line-center c-theme-bg"></div>
-                    </div>
-                    <div class="owl-carousel owl-theme c-theme owl-bordered1 c-owl-nav-center" data-items="6" data-desktop-items="4" data-desktop-small-items="3" data-tablet-items="3" data-mobile-items="2" data-slide-speed="5000" data-rtl="false">
-                        <div class="item">
-                            <a href="https://nick.vn/user/profile"><img src="img/vHPm7XyQah_1623147701.jpg" alt="Trang cá nhân nickvn" /></a>
-                        </div>
-                        <div class="item">
-                            <a href="https://nick.vn/dich-vu"><img src="img/vHPm7XyQah_1623147701.jpg" alt="dịch vụ nickvn" /></a>
-                        </div>
-                        <div class="item">
-                            <a href="/mua-the"><img src="img/vHPm7XyQah_1623147701.jpg" alt="Mua thẻ cào" /></a>
-                        </div>
-                        <div class="item">
-                            <a href="/nap-the"><img src="img/vHPm7XyQah_1623147701.jpg" alt="nạp tiền" /></a>
-                        </div>
-                    </div>
-                    <!-- End-->
-                </div>
-                <!-- End-->
-            </div>
-        </div>
-        <script type="text/javascript">
-            $('.owl-carousel-dicvu').owlCarousel({
-                loop: true,
-                margin: 10,
-                responsiveClass: true,
-                responsive: {
-                    0: {
-                        items: 1,
-                        nav: true
-                    },
-                    600: {
-                        items: 3,
-                        nav: false
-                    },
-                    1000: {
-                        items: 5,
-                        nav: true,
-                        loop: false
-                    }
-                }
-            })
-        </script>
-        <div class="c-content-box c-size-md c-bg-white">
-            <div class="container">
-                <!-- Begin: Testimonals 1 component -->
-                <div class="c-content-client-logos-slider-1  c-bordered" data-slider="owl">
-                    <!-- Begin: Title 1 component -->
-                    <div class="c-content-title-1">
-                        <h3 class="c-center c-font-uppercase c-font-bold">Danh mục game</h3>
-                        <div class="c-line-center c-theme-bg"></div>
-                    </div>
-                    <div class="row row-flex-safari game-list">
-                        <div class="col-sm-3 col-xs-6 p-5">
-                            <div class="classWithPad">
-                                <div class="news_image">
-                                    <img style="position: absolute;max-width: 79px;height: auto;top: -5px;right: -6px;z-index: 1122;" src="img/giam.png" />
-                                    <a href="/danh-muc/danh-muc-game-free-fire" title="Danh Mục Game Free Fire" class="">
-                                        <img src="img/danhmuc.gif" alt="Danh Mục Game Free Fire"></a>
-                                </div>
-                                <div class="news_title">
-                                    <h2>
-                                        <a href="/danh-muc/danh-muc-game-lien-quan" title="Danh Mục Game Liên Quân">Danh Mục Game Liên Quân</a>
-                                    </h2>
-                                </div>
-                                <div class="news_description">
-                                    <p>
-                                        Số tài khoản: 23,763
-                                    </p>
-                                    <!-- <p>
-                                 Đã bán: 198
-                                 </p> -->
-                                </div>
-                                <div class="a-more">
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <div class="custom72 view">
-                                                <a href="/danh-muc/danh-muc-game-lien-quan" class="" title="Danh Mục Game Liên Quân">
-                                                    &nbsp;
-                                                    <style type="text/css">
-                                                        .custom72 {
-                                                            border: none !important;
-                                                            padding: 0;
-                                                        }
-
-                                                        .custom72 a {
-                                                            background-size: 136px 35px;
-                                                            background-repeat: no-repeat;
-                                                            border: none;
-                                                            margin: 0 auto;
-                                                            width: 136px;
-                                                            height: 35px;
-                                                            background: url(img/danhmuc.gif);
-                                                        }
-
-                                                        .custom72 a:hover {
-                                                            background-size: 136px 35px;
-                                                            background-repeat: no-repeat;
-                                                            border: none;
-                                                            margin: 0 auto;
-                                                            width: 136px;
-                                                            height: 35px;
-                                                            background: url(img/danhmuc.gif);
-                                                            filter: saturate(2);
-                                                            filter: brightness(130%);
-                                                        }
-                                                    </style>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3 col-xs-6 p-5">
-                            <div class="classWithPad">
-                                <div class="news_image">
-                                    <img style="position: absolute;max-width: 79px;height: auto;top: -5px;right: -6px;z-index: 1122;" src="img/giam.png" />
-                                    <a href="/danh-muc/danh-muc-game-free-fire" title="Danh Mục Game Free Fire" class="">
-                                        <img src="img/danhmuc.gif" alt="Danh Mục Game Free Fire"></a>
-                                </div>
-                                <div class="news_title">
-                                    <h2>
-                                        <a href="/danh-muc/danh-muc-game-free-fire" title="Danh Mục Game Free Fire">Danh Mục Game Free Fire</a>
-                                    </h2>
-                                </div>
-                                <div class="news_description">
-                                    <p>
-                                        Số tài khoản: 23,490
-                                    </p>
-                                    <!-- <p>
-                                 Đã bán: 198
-                                 </p> -->
-                                </div>
-                                <div class="a-more">
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <div class="custom74 view">
-                                                <a href="/danh-muc/danh-muc-game-free-fire" class="" title="Danh Mục Game Free Fire">
-                                                    &nbsp;
-                                                    <style type="text/css">
-                                                        .custom74 {
-                                                            border: none !important;
-                                                            padding: 0;
-                                                        }
-
-                                                        .custom74 a {
-                                                            background-size: 136px 35px;
-                                                            background-repeat: no-repeat;
-                                                            border: none;
-                                                            margin: 0 auto;
-                                                            width: 136px;
-                                                            height: 35px;
-                                                            background: url(/storage/images/pqiEm5g2bB_1623290758.jpg);
-                                                        }
-
-                                                        .custom74 a:hover {
-                                                            background-size: 136px 35px;
-                                                            background-repeat: no-repeat;
-                                                            border: none;
-                                                            margin: 0 auto;
-                                                            width: 136px;
-                                                            height: 35px;
-                                                            background: url(/storage/images/pqiEm5g2bB_1623290758.jpg);
-                                                            filter: saturate(2);
-                                                            filter: brightness(130%);
-                                                        }
-                                                    </style>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3 col-xs-6 p-5">
-                            <div class="classWithPad">
-                                <div class="news_image">
-                                    <img style="position: absolute;max-width: 79px;height: auto;top: -5px;right: -6px;z-index: 1122;" src="img/giam.png" />
-                                    <a href="/danh-muc/danh-muc-game-free-fire" title="Danh Mục Game Free Fire" class="">
-                                        <img src="img/danhmuc.gif" alt="Danh Mục Game Free Fire"></a>
-                                </div>
-                                <div class="news_title">
-                                    <h2>
-                                        <a href="/danh-muc/danh-muc-game-lien-minh" title="Danh Mục Game Liên Minh">Danh Mục Game Liên Minh</a>
-                                    </h2>
-                                </div>
-                                <div class="news_description">
-                                    <p>
-                                        Số tài khoản: 1,713
-                                    </p>
-                                    <!-- <p>
-                                 Đã bán: 198
-                                 </p> -->
-                                </div>
-                                <div class="a-more">
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <div class="custom75 view">
-                                                <a href="/danh-muc/danh-muc-game-lien-minh" class="" title="Danh Mục Game Liên Minh">
-                                                    &nbsp;
-                                                    <style type="text/css">
-                                                        .custom75 {
-                                                            border: none !important;
-                                                            padding: 0;
-                                                        }
-
-                                                        .custom75 a {
-                                                            background-size: 136px 35px;
-                                                            background-repeat: no-repeat;
-                                                            border: none;
-                                                            margin: 0 auto;
-                                                            width: 136px;
-                                                            height: 35px;
-                                                            background: url(/storage/images/pIsMw0Firr_1623290767.jpg);
-                                                        }
-
-                                                        .custom75 a:hover {
-                                                            background-size: 136px 35px;
-                                                            background-repeat: no-repeat;
-                                                            border: none;
-                                                            margin: 0 auto;
-                                                            width: 136px;
-                                                            height: 35px;
-                                                            background: url(/storage/images/pIsMw0Firr_1623290767.jpg);
-                                                            filter: saturate(2);
-                                                            filter: brightness(130%);
-                                                        }
-                                                    </style>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3 col-xs-6 p-5">
-                            <div class="classWithPad">
-                                <div class="news_image">
-                                    <img style="position: absolute;max-width: 79px;height: auto;top: -5px;right: -6px;z-index: 1122;" src="img/giam.png" />
-                                    <a href="/danh-muc/danh-muc-game-free-fire" title="Danh Mục Game Free Fire" class="">
-                                        <img src="img/danhmuc.gif" alt="Danh Mục Game Free Fire"></a>
-                                </div>
-                                <div class="news_title">
-                                    <h2>
-                                        <a href="/danh-muc/danh-muc-game-ngoc-rong" title="Danh Mục Game Ngọc Rồng">Danh Mục Game Ngọc Rồng</a>
-                                    </h2>
-                                </div>
-                                <div class="news_description">
-                                    <p>
-                                        Số tài khoản: 16,519
-                                    </p>
-                                    <!-- <p>
-                                 Đã bán: 198
-                                 </p> -->
-                                </div>
-                                <div class="a-more">
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <div class="custom76 view">
-                                                <a href="/danh-muc/danh-muc-game-ngoc-rong" class="" title="Danh Mục Game Ngọc Rồng">
-                                                    &nbsp;
-                                                    <style type="text/css">
-                                                        .custom76 {
-                                                            border: none !important;
-                                                            padding: 0;
-                                                        }
-
-                                                        .custom76 a {
-                                                            background-size: 136px 35px;
-                                                            background-repeat: no-repeat;
-                                                            border: none;
-                                                            margin: 0 auto;
-                                                            width: 136px;
-                                                            height: 35px;
-                                                            background: url(/storage/images/NxIEjjXh9k_1623292566.jpg);
-                                                        }
-
-                                                        .custom76 a:hover {
-                                                            background-size: 136px 35px;
-                                                            background-repeat: no-repeat;
-                                                            border: none;
-                                                            margin: 0 auto;
-                                                            width: 136px;
-                                                            height: 35px;
-                                                            background: url(/storage/images/NxIEjjXh9k_1623292566.jpg);
-                                                            filter: saturate(2);
-                                                            filter: brightness(130%);
-                                                        }
-                                                    </style>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3 col-xs-6 p-5">
-                            <div class="classWithPad">
-                                <div class="news_image">
-                                    <img style="position: absolute;max-width: 79px;height: auto;top: -5px;right: -6px;z-index: 1122;" src="img/giam.png" />
-                                    <a href="/danh-muc/danh-muc-game-free-fire" title="Danh Mục Game Free Fire" class="">
-                                        <img src="img/danhmuc.gif" alt="Danh Mục Game Free Fire"></a>
-                                </div>
-                                <div class="news_title">
-                                    <h2>
-                                        <a href="/danh-muc/danh-muc-game-pubg-mobile" title="Danh Mục Game Pubg Mobile">Danh Mục Game Pubg Mobile</a>
-                                    </h2>
-                                </div>
-                                <div class="news_description">
-                                    <p>
-                                        Số tài khoản: 3,395
-                                    </p>
-                                    <!-- <p>
-                                 Đã bán: 198
-                                 </p> -->
-                                </div>
-                                <div class="a-more">
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <div class="custom77 view">
-                                                <a href="/danh-muc/danh-muc-game-pubg-mobile" class="" title="Danh Mục Game Pubg Mobile">
-                                                    &nbsp;
-                                                    <style type="text/css">
-                                                        .custom77 {
-                                                            border: none !important;
-                                                            padding: 0;
-                                                        }
-
-                                                        .custom77 a {
-                                                            background-size: 136px 35px;
-                                                            background-repeat: no-repeat;
-                                                            border: none;
-                                                            margin: 0 auto;
-                                                            width: 136px;
-                                                            height: 35px;
-                                                            background: url(/storage/images/uFSkBN1bOg_1623292574.jpg);
-                                                        }
-
-                                                        .custom77 a:hover {
-                                                            background-size: 136px 35px;
-                                                            background-repeat: no-repeat;
-                                                            border: none;
-                                                            margin: 0 auto;
-                                                            width: 136px;
-                                                            height: 35px;
-                                                            background: url(/storage/images/uFSkBN1bOg_1623292574.jpg);
-                                                            filter: saturate(2);
-                                                            filter: brightness(130%);
-                                                        }
-                                                    </style>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3 col-xs-6 p-5">
-                            <div class="classWithPad">
-                                <div class="news_image">
-                                    <img style="position: absolute;max-width: 79px;height: auto;top: -5px;right: -6px;z-index: 1122;" src="img/giam.png" />
-                                    <a href="/danh-muc/danh-muc-game-free-fire" title="Danh Mục Game Free Fire" class="">
-                                        <img src="img/danhmuc.gif" alt="Danh Mục Game Free Fire"></a>
-                                </div>
-                                <div class="news_title">
-                                    <h2>
-                                        <a href="/danh-muc/danh-muc-game-zingspeed-mobile" title="Danh Mục Game ZingsPeed Mobile">Danh Mục Game ZingsPeed Mobile</a>
-                                    </h2>
-                                </div>
-                                <div class="news_description">
-                                    <p>
-                                        Số tài khoản: 666
-                                    </p>
-                                    <!-- <p>
-                                 Đã bán: 198
-                                 </p> -->
-                                </div>
-                                <div class="a-more">
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <div class="custom78 view">
-                                                <a href="/danh-muc/danh-muc-game-zingspeed-mobile" class="" title="Danh Mục Game ZingsPeed Mobile">
-                                                    &nbsp;
-                                                    <style type="text/css">
-                                                        .custom78 {
-                                                            border: none !important;
-                                                            padding: 0;
-                                                        }
-
-                                                        .custom78 a {
-                                                            background-size: 136px 35px;
-                                                            background-repeat: no-repeat;
-                                                            border: none;
-                                                            margin: 0 auto;
-                                                            width: 136px;
-                                                            height: 35px;
-                                                            background: url(/storage/images/ygduWjmEdL_1623292583.jpg);
-                                                        }
-
-                                                        .custom78 a:hover {
-                                                            background-size: 136px 35px;
-                                                            background-repeat: no-repeat;
-                                                            border: none;
-                                                            margin: 0 auto;
-                                                            width: 136px;
-                                                            height: 35px;
-                                                            background: url(/storage/images/ygduWjmEdL_1623292583.jpg);
-                                                            filter: saturate(2);
-                                                            filter: brightness(130%);
-                                                        }
-                                                    </style>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3 col-xs-6 p-5">
-                            <div class="classWithPad">
-                                <div class="news_image">
-                                    <img style="position: absolute;max-width: 79px;height: auto;top: -5px;right: -6px;z-index: 1122;" src="img/giam.png" />
-                                    <a href="/danh-muc/danh-muc-game-free-fire" title="Danh Mục Game Free Fire" class="">
-                                        <img src="img/danhmuc.gif" alt="Danh Mục Game Free Fire"></a>
-                                </div>
-                                <div class="news_title">
-                                    <h2>
-                                        <a href="/danh-muc/danh-muc-game-fo4" title="Danh Mục Game FO4">Danh Mục Game FO4</a>
-                                    </h2>
-                                </div>
-                                <div class="news_description">
-                                    <p>
-                                        Số tài khoản: 550
-                                    </p>
-                                    <!-- <p>
-                                 Đã bán: 198
-                                 </p> -->
-                                </div>
-                                <div class="a-more">
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <div class="custom79 view">
-                                                <a href="/danh-muc/danh-muc-game-fo4" class="" title="Danh Mục Game FO4">
-                                                    &nbsp;
-                                                    <style type="text/css">
-                                                        .custom79 {
-                                                            border: none !important;
-                                                            padding: 0;
-                                                        }
-
-                                                        .custom79 a {
-                                                            background-size: 136px 35px;
-                                                            background-repeat: no-repeat;
-                                                            border: none;
-                                                            margin: 0 auto;
-                                                            width: 136px;
-                                                            height: 35px;
-                                                            background: url(/storage/images/eaU7VQJUHv_1623292590.jpg);
-                                                        }
-
-                                                        .custom79 a:hover {
-                                                            background-size: 136px 35px;
-                                                            background-repeat: no-repeat;
-                                                            border: none;
-                                                            margin: 0 auto;
-                                                            width: 136px;
-                                                            height: 35px;
-                                                            background: url(/storage/images/eaU7VQJUHv_1623292590.jpg);
-                                                            filter: saturate(2);
-                                                            filter: brightness(130%);
-                                                        }
-                                                    </style>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3 col-xs-6 p-5">
-                            <div class="classWithPad">
-                                <div class="news_image">
-                                    <img style="position: absolute;max-width: 79px;height: auto;top: -5px;right: -6px;z-index: 1122;" src="img/giam.png" />
-                                    <a href="/danh-muc/danh-muc-game-free-fire" title="Danh Mục Game Free Fire" class="">
-                                        <img src="img/danhmuc.gif" alt="Danh Mục Game Free Fire"></a>
-                                </div>
-                                <div class="news_title">
-                                    <h2>
-                                        <a href="/danh-muc/danh-muc-game-lang-la" title="Danh Mục Game Làng Lá">Danh Mục Game Làng Lá</a>
-                                    </h2>
-                                </div>
-                                <div class="news_description">
-                                    <p>
-                                        Số tài khoản: 2,126
-                                    </p>
-                                    <!-- <p>
-                                 Đã bán: 198
-                                 </p> -->
-                                </div>
-                                <div class="a-more">
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <div class="custom80 view">
-                                                <a href="/danh-muc/danh-muc-game-lang-la" class="" title="Danh Mục Game Làng Lá">
-                                                    &nbsp;
-                                                    <style type="text/css">
-                                                        .custom80 {
-                                                            border: none !important;
-                                                            padding: 0;
-                                                        }
-
-                                                        .custom80 a {
-                                                            background-size: 136px 35px;
-                                                            background-repeat: no-repeat;
-                                                            border: none;
-                                                            margin: 0 auto;
-                                                            width: 136px;
-                                                            height: 35px;
-                                                            background: url(/storage/images/lovW40xkFs_1623292597.jpg);
-                                                        }
-
-                                                        .custom80 a:hover {
-                                                            background-size: 136px 35px;
-                                                            background-repeat: no-repeat;
-                                                            border: none;
-                                                            margin: 0 auto;
-                                                            width: 136px;
-                                                            height: 35px;
-                                                            background: url(/storage/images/lovW40xkFs_1623292597.jpg);
-                                                            filter: saturate(2);
-                                                            filter: brightness(130%);
-                                                        }
-                                                    </style>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3 col-xs-6 p-5">
-                            <div class="classWithPad">
-                                <div class="news_image">
-                                    <img style="position: absolute;max-width: 79px;height: auto;top: -5px;right: -6px;z-index: 1122;" src="img/giam.png" />
-                                    <a href="/danh-muc/danh-muc-game-free-fire" title="Danh Mục Game Free Fire" class="">
-                                        <img src="img/danhmuc.gif" alt="Danh Mục Game Free Fire"></a>
-                                </div>
-                                <div class="news_title">
-                                    <h2>
-                                        <a href="/danh-muc/danh-muc-game-dot-kich" title="Danh Mục Game Đột Kích">Danh Mục Game Đột Kích</a>
-                                    </h2>
-                                </div>
-                                <div class="news_description">
-                                    <p>
-                                        Số tài khoản: 4,809
-                                    </p>
-                                    <!-- <p>
-                                 Đã bán: 198
-                                 </p> -->
-                                </div>
-                                <div class="a-more">
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <div class="custom81 view">
-                                                <a href="/danh-muc/danh-muc-game-dot-kich" class="" title="Danh Mục Game Đột Kích">
-                                                    &nbsp;
-                                                    <style type="text/css">
-                                                        .custom81 {
-                                                            border: none !important;
-                                                            padding: 0;
-                                                        }
-
-                                                        .custom81 a {
-                                                            background-size: 136px 35px;
-                                                            background-repeat: no-repeat;
-                                                            border: none;
-                                                            margin: 0 auto;
-                                                            width: 136px;
-                                                            height: 35px;
-                                                            background: url(/storage/images/KHAOcgnPv1_1625383896.jpg);
-                                                        }
-
-                                                        .custom81 a:hover {
-                                                            background-size: 136px 35px;
-                                                            background-repeat: no-repeat;
-                                                            border: none;
-                                                            margin: 0 auto;
-                                                            width: 136px;
-                                                            height: 35px;
-                                                            background: url(/storage/images/KHAOcgnPv1_1625383896.jpg);
-                                                            filter: saturate(2);
-                                                            filter: brightness(130%);
-                                                        }
-                                                    </style>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3 col-xs-6 p-5">
-                            <div class="classWithPad">
-                                <div class="news_image">
-                                    <img style="position: absolute;max-width: 79px;height: auto;top: -5px;right: -6px;z-index: 1122;" src="img/giam.png" />
-                                    <a href="/danh-muc/danh-muc-game-free-fire" title="Danh Mục Game Free Fire" class="">
-                                        <img src="img/danhmuc.gif" alt="Danh Mục Game Free Fire"></a>
-                                </div>
-                                <div class="news_title">
-                                    <h2>
-                                        <a href="/danh-muc/danh-muc-game-roblox" title="Danh Mục Game Roblox">Danh Mục Game Roblox</a>
-                                    </h2>
-                                </div>
-                                <div class="news_description">
-                                    <p>
-                                        Số tài khoản: 299
-                                    </p>
-                                    <!-- <p>
-                                 Đã bán: 198
-                                 </p> -->
-                                </div>
-                                <div class="a-more">
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <div class="custom207 view">
-                                                <a href="/danh-muc/danh-muc-game-roblox" class="" title="Danh Mục Game Roblox">
-                                                    &nbsp;
-                                                    <style type="text/css">
-                                                        .custom207 {
-                                                            border: none !important;
-                                                            padding: 0;
-                                                        }
-
-                                                        .custom207 a {
-                                                            background-size: 136px 35px;
-                                                            background-repeat: no-repeat;
-                                                            border: none;
-                                                            margin: 0 auto;
-                                                            width: 136px;
-                                                            height: 35px;
-                                                            background: url(/storage/images/9cRiwF0dTi_1625905876.jpg);
-                                                        }
-
-                                                        .custom207 a:hover {
-                                                            background-size: 136px 35px;
-                                                            background-repeat: no-repeat;
-                                                            border: none;
-                                                            margin: 0 auto;
-                                                            width: 136px;
-                                                            height: 35px;
-                                                            background: url(/storage/images/9cRiwF0dTi_1625905876.jpg);
-                                                            filter: saturate(2);
-                                                            filter: brightness(130%);
-                                                        }
-                                                    </style>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3 col-xs-6 p-5">
-                            <div class="classWithPad">
-                                <div class="news_image">
-                                    <img style="position: absolute;max-width: 79px;height: auto;top: -5px;right: -6px;z-index: 1122;" src="img/giam.png" />
-                                    <a href="/danh-muc/danh-muc-game-free-fire" title="Danh Mục Game Free Fire" class="">
-                                        <img src="img/danhmuc.gif" alt="Danh Mục Game Free Fire"></a>
-                                </div>
-                                <div class="news_title">
-                                    <h2>
-                                        <a href="/danh-muc/danh-muc-game-roblox" title="Danh Mục Game Roblox">Danh Mục Game Roblox</a>
-                                    </h2>
-                                </div>
-                                <div class="news_description">
-                                    <p>
-                                        Số tài khoản: 299
-                                    </p>
-                                    <!-- <p>
-                                 Đã bán: 198
-                                 </p> -->
-                                </div>
-                                <div class="a-more">
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <div class="custom207 view">
-                                                <a href="/danh-muc/danh-muc-game-roblox" class="" title="Danh Mục Game Roblox">
-                                                    &nbsp;
-                                                    <style type="text/css">
-                                                        .custom207 {
-                                                            border: none !important;
-                                                            padding: 0;
-                                                        }
-
-                                                        .custom207 a {
-                                                            background-size: 136px 35px;
-                                                            background-repeat: no-repeat;
-                                                            border: none;
-                                                            margin: 0 auto;
-                                                            width: 136px;
-                                                            height: 35px;
-                                                            background: url(/storage/images/9cRiwF0dTi_1625905876.jpg);
-                                                        }
-
-                                                        .custom207 a:hover {
-                                                            background-size: 136px 35px;
-                                                            background-repeat: no-repeat;
-                                                            border: none;
-                                                            margin: 0 auto;
-                                                            width: 136px;
-                                                            height: 35px;
-                                                            background: url(/storage/images/9cRiwF0dTi_1625905876.jpg);
-                                                            filter: saturate(2);
-                                                            filter: brightness(130%);
-                                                        }
-                                                    </style>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3 col-xs-6 p-5">
-                            <div class="classWithPad">
-                                <div class="news_image">
-                                    <img style="position: absolute;max-width: 79px;height: auto;top: -5px;right: -6px;z-index: 1122;" src="img/giam.png" />
-                                    <a href="/danh-muc/danh-muc-game-free-fire" title="Danh Mục Game Free Fire" class="">
-                                        <img src="img/danhmuc.gif" alt="Danh Mục Game Free Fire"></a>
-                                </div>
-                                <div class="news_title">
-                                    <h2>
-                                        <a href="/danh-muc/danh-muc-game-roblox" title="Danh Mục Game Roblox">Danh Mục Game Roblox</a>
-                                    </h2>
-                                </div>
-                                <div class="news_description">
-                                    <p>
-                                        Số tài khoản: 299
-                                    </p>
-                                    <!-- <p>
-                                 Đã bán: 198
-                                 </p> -->
-                                </div>
-                                <div class="a-more">
-                                    <div class="row">
-                                        <div class="col-xs-12">
-                                            <div class="custom207 view">
-                                                <a href="/danh-muc/danh-muc-game-roblox" class="" title="Danh Mục Game Roblox">
-                                                    &nbsp;
-                                                    <style type="text/css">
-                                                        .custom207 {
-                                                            border: none !important;
-                                                            padding: 0;
-                                                        }
-
-                                                        .custom207 a {
-                                                            background-size: 136px 35px;
-                                                            background-repeat: no-repeat;
-                                                            border: none;
-                                                            margin: 0 auto;
-                                                            width: 136px;
-                                                            height: 35px;
-                                                            background: url(/storage/images/9cRiwF0dTi_1625905876.jpg);
-                                                        }
-
-                                                        .custom207 a:hover {
-                                                            background-size: 136px 35px;
-                                                            background-repeat: no-repeat;
-                                                            border: none;
-                                                            margin: 0 auto;
-                                                            width: 136px;
-                                                            height: 35px;
-                                                            background: url(/storage/images/9cRiwF0dTi_1625905876.jpg);
-                                                            filter: saturate(2);
-                                                            filter: brightness(130%);
-                                                        }
-                                                    </style>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-                        <!-- End-->
-                    </div>
-                    <!-- End-->
-                </div>
-            </div>
-            <style type="text/css">
-                .news_image,
-                .image,
-                .news_title,
-                .a-more,
-                .news_description {
-                    position: relative;
-                    z-index: 200;
-                }
-
-                span.sale {
-                    position: absolute;
-                    z-index: 1000;
-                    right: -1px;
-                    top: -1px;
-                    background: rgba(255, 212, 36, .9);
-                    padding: 5px;
-                    text-align: center;
-                    color: #ee4d2d;
-                    width: 50px;
-                    font-weight: 700;
-                    font-size: 15px;
-                }
-
-                .sale:after {
-                    content: "";
-                    width: 0;
-                    height: 0;
-                    left: 0;
-                    bottom: -4px;
-                    position: absolute;
-                    border-color: transparent rgba(255, 212, 36, .9);
-                    border-style: solid;
-                    border-width: 0 25px 4px;
-                }
-
-                .outPrice {
-                    padding-top: 20px;
-                    text-align: center;
-                    width: 100px;
-                    margin: 0 auto;
-                    margin-top: 10px;
-                    display: flex;
-                    justify-content: center;
-                }
-
-                .oldPrice {
-                    text-decoration: line-through;
-                    color: #3f0;
-                    border: 2px solid;
-                    padding: 5px 15px;
-                    border-radius: 5px;
-                    font-size: 14px;
-                    font-weight: bold;
-                }
-
-                .newPrice {
-                    border: 2px solid red;
-                    padding: 5px 15px;
-                    color: red;
-                    display: inline;
-                    border-radius: 5px;
-                    margin-left: 10px;
-                    font-size: 14px;
-                    font-weight: bold;
-                    margin-bottom: 10px;
-                }
-
-                .game-list .a-more .view {
-                    margin-top: 20px;
-                }
-
-                @media (max-width: 550px) {
-                    .outPrice {
-                        flex-direction: column;
-                    }
-
-                    .newPrice {
-                        margin-left: 0;
-                        margin-top: 10px;
-                        margin-bottom: 10px;
-                    }
-                }
-            </style>
-            <!-- END: PAGE CONTENT -->
-        </div>
         <div class="modal fade" id="noticeModal" role="dialog" style="display: none;" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="loader" style="text-align: center"><img src="/assets/frontend/images/loader.gif" style="width: 50px;height: 50px;display: none"></div>
@@ -1287,7 +399,7 @@
                             <!-- <div class="c-content-title-1">
                            <h3 class="c-font-uppercase c-font-bold c-font-white">Về <span class="c-theme-font">Nick.vn</span>
                            
-                               <a target="_blank"  href="//www.dmca.com/Protection/Status.aspx?ID=6766daa6-8986-40c5-b282-a9c9e6a883de" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/_dmca_premi_badge_1.png?ID=6766daa6-8986-40c5-b282-a9c9e6a883de"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
+                               <a target="_blank"  href="//www.dmca.com/Protection/Status.aspx?ID=6766daa6-8986-40c5-b282-a9c9e6a883de" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/_dmca_premi_badge_1.png?ID=6766daa6-8986-40c5-b282-a9c9e6a883de"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js')}}"> </script>
                            
                            </h3>
                            <div class="c-line-left hide"></div>
@@ -1370,23 +482,23 @@
     <!--[if lt IE 9]>
       <![endif]-->
 
-    <script src="js/jquery.easing.min.js" type="text/javascript"></script>
-    <script src="js/wow.js" type="text/javascript"></script>
-    <script src="js/reveal-animate.js" type="text/javascript"></script>
+    <script src="{{asset('frontend/js/jquery.easing.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('frontend/js/wow.js')}}" type="text/javascript"></script>
+    <script src="{{asset('frontend/js/reveal-animate.js')}}" type="text/javascript"></script>
     <!-- END: CORE PLUGINS -->
     <!-- BEGIN: LAYOUT PLUGINS -->
-    <script src="js/magnific.js" type="text/javascript"></script>
-    <script src="js/jquery.cubeportfolio.min.js" type="text/javascript"></script>
-    <script src="js/jquery.counterup.min.js" type="text/javascript"></script>
-    <script src="js/jquery.waypoints.min.js" type="text/javascript"></script>
-    <script src="js/jquery.fancybox.min.js"></script>
-    <script src="js/jquery.smooth-scroll.js" type="text/javascript"></script>
-    <script src="js/js.cookie.js" type="text/javascript"></script>
+    <script src="{{asset('frontend/js/magnific.js')}}" type="text/javascript"></script>
+    <script src="{{asset('frontend/js/jquery.cubeportfolio.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('frontend/js/jquery.counterup.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('frontend/js/jquery.waypoints.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('frontend/js/jquery.fancybox.min.js')}}"></script>
+    <script src="{{asset('frontend/js/jquery.smooth-scroll.js')}}" type="text/javascript"></script>
+    <script src="{{asset('frontend/js/js.cookie.js')}}" type="text/javascript"></script>
     <!-- END: LAYOUT PLUGINS -->
     <!-- BEGIN: THEME SCRIPTS -->
-    <script src="js/components.js" type="text/javascript"></script>
-    <script src="js/app.js" type="text/javascript"></script>
-    <script src="js/bootbox.min.js" type="text/javascript"></script>
+    <script src="{{asset('frontend/js/components.js')}}" type="text/javascript"></script>
+    <script src="{{asset('frontend/js/app.js')}}" type="text/javascript"></script>
+    <script src="{{asset('frontend/js/bootbox.min.js')}}" type="text/javascript"></script>
     <script>
         $(document).ready(function() {
             App.init(); // init core
@@ -1430,14 +542,14 @@
     </script>
     <!-- END: THEME SCRIPTS -->
     <!-- BEGIN: PAGE SCRIPTS -->
-    <script src="js/moment.min.js" type="text/javascript"></script>
-    <script src="js/daterangepicker.min.js" type="text/javascript"></script>
-    <script src="js/bootstrap-datepicker.min.js" type="text/javascript"></script>
-    <script src="js/bootstrap-timepicker.min.js" type="text/javascript"></script>
-    <script src="js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
-    <script src="js/datepicker.js" type="text/javascript"></script>
-    <script src="js/jquery.mask.min.js" type="text/javascript"></script>
-    <script src="js/common.js" type="text/javascript"></script>
+    <script src="{{asset('frontend/js/moment.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('frontend/js/daterangepicker.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('frontend/js/bootstrap-datepicker.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('frontend/js/bootstrap-timepicker.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('frontend/js/bootstrap-datetimepicker.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('frontend/js/datepicker.js')}}" type="text/javascript"></script>
+    <script src="{{asset('frontend/js/jquery.mask.min.js')}}" type="text/javascript"></script>
+    <script src="{{asset('frontend/js/common.js')}}" type="text/javascript"></script>
     <!-- Load Facebook SDK for JavaScript -->
     <div id="fb-root"></div>
     <!-- Your customer chat code -->
@@ -1499,6 +611,28 @@
         gtag('js', new Date());
 
         gtag('config', 'G-MZBLL7R7EG');
+    </script>
+    <script type="text/javascript">
+        $('.owl-carousel-dicvu').owlCarousel({
+            loop: true,
+            margin: 10,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true
+                },
+                600: {
+                    items: 3,
+                    nav: false
+                },
+                1000: {
+                    items: 5,
+                    nav: true,
+                    loop: false
+                }
+            }
+        })
     </script>
 </body>
 
