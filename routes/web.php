@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,4 +22,6 @@ Route::get('/danh-muc', [IndexController::class,'danhmuc'])->name('danhmuc'); //
 Route::get('/danh-muc/{slug}', [IndexController::class,'danhmuccon'])->name('danhmuccon'); // all categories
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+// Category
+Route::resource('/category', CategoryController::class);
