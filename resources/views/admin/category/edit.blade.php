@@ -9,6 +9,16 @@
     <div class="col-md-8">
         <div class="card">
             <div class="card-header">Liet ke danh sach danh muc game</div>
+            
+            @if ($errors->any()):
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach($errors->all() as $error)
+                            <li>{{$error}}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
 
             <div class="card-body">
                 @if (session('status'))
@@ -23,7 +33,7 @@
                     @csrf
                     <div class="form-group">
                         <label>Title</label>
-                        <input type="text" class="form-control" required value="{{$category->title}}" name="title">
+                        <input type="text" class="form-control" value="{{$category->title}}" name="title">
                     </div>
                     <div class="form-group">
                         <label>Image</label>
@@ -32,17 +42,17 @@
                     </div>
                     <div class="form-group">
                         <label>Description</label>
-                        <textarea class="form-control" required name="description">{{$category->description}}</textarea>
+                        <textarea class="form-control" name="description">{{$category->description}}</textarea>
                     </div>
                     <div class="form-group">
                         <label>Example select</label>
-                        <select class="form-control" required name="status">
-                            @if($category->status == 0)
-                            <option value="0" selected>Hiển thị</option>
-                            <option value="1">Không hiển thị</option>
+                        <select class="form-control" name="status">
+                            @if($category->status == 1)
+                            <option value="1" selected>Hiển thị</option>
+                            <option value="0">Không hiển thị</option>
                             @else
-                            <option value="0">Hiển thị</option>
-                            <option value="1" selected>Không hiển thị</option>
+                            <option value="1">Hiển thị</option>
+                            <option value="0" selected>Không hiển thị</option>
                             @endif
                         </select>
                     </div>

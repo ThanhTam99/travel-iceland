@@ -36,7 +36,19 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->all();
+        $data = $request->validate([
+            "title" => "required|unique:categories|max:255",
+            "description" => "required|max:255",
+            "image" => "required|image|mimes:jpg,png,jpeg,gif,sgv|max:2048|dimensions:min_width=100,min_height=100,max_width=2000,max-height=2000",
+            "status" => "required",
+        ],
+        [
+            "title.unique" => "Ten danh muc game da co, xin nhap ten khac",
+            "title.required" => "Ten danh muc la bat buoc",
+            "description.required" => "Mo ta danh muc la bat buoc",
+            "image.required" => "Hinh anh la bat buoc",
+        ]
+        );
         $category = new Category();
         $category->title = $data['title'];
         $category->description = $data['description'];
@@ -56,7 +68,7 @@ class CategoryController extends Controller
 
         $category->status  = $data['status'];
         $category->save();
-        return redirect()->back();
+        return redirect()->route("category.index")->with("status", "Them danh muc thanh cong");
     }
 
     /**
@@ -91,7 +103,19 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = $request->all();
+        $data = $request->validate([
+            "title" => "required|unique:categories|max:255",
+            "description" => "required|max:255",
+            "image" => "image|mimes:jpg,png,jpeg,gif,sgv|max:2048|dimensions:min_width=100,min_height=100,max_width=2000,max-height=2000",
+            "status" => "required",
+        ],
+        [
+            "title.unique" => "Ten danh muc game da co, xin nhap ten khac",
+            "title.required" => "Ten danh muc la bat buoc",
+            "description.required" => "Mo ta danh muc la bat buoc",
+            "image.required" => "Hinh anh la bat buoc",
+        ]
+        );
         $category = Category::find($id);
         $category->title = $data['title'];
         $category->description = $data['description'];
@@ -116,7 +140,7 @@ class CategoryController extends Controller
         }
         $category->status  = $data['status'];
         $category->save();
-        return redirect()->back();
+        return redirect()->back()->with("status", "Sua danh muc thanh cong");
     }
 
     /**
