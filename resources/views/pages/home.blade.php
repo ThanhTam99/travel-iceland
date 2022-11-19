@@ -39,16 +39,17 @@
                 <div class="c-line-center c-theme-bg"></div>
             </div>
             <div class="row row-flex-safari game-list">
+                @foreach($category as $key => $cate) 
                 <div class="col-sm-3 col-xs-6 p-5">
                     <div class="classWithPad">
                         <div class="news_image">
                             <img style="position: absolute;max-width: 79px;height: auto;top: -5px;right: -6px;z-index: 1122;" src="{{asset('frontend/images/giam.png')}}" />
-                            <a href="{{route('danhmuc')}}" title="Danh Mục Game Free Fire" class="">
-                                <img src="{{asset('frontend/images/danhmuc.gif')}}" alt="Danh Mục Game Free Fire"></a>
+                            <a href="{{route('danhmucgame',[$cate->slug])}}" title="{{$cate->title}}" class="">
+                                <img src="{{'uploads/category/'.$cate->image}}" alt="{{$cate->title}}"></a>
                         </div>
                         <div class="news_title">
                             <h2>
-                                <a href="{{route('dichvu')}}" title="Danh Mục Game Liên Quân">Danh Mục Game Liên Quân</a>
+                                <a href="{{route('danhmucgame',[$cate->slug])}}" title="{{$cate->title}}">{{$cate->title}}</a>
                             </h2>
                         </div>
                         <div class="news_description">
@@ -63,7 +64,7 @@
                             <div class="row">
                                 <div class="col-xs-12">
                                     <div class="custom72 view">
-                                        <a href="#" class="" title="Danh Mục Game Liên Quân">
+                                        <a href="#" class="" title="{{$cate->title}}">
                                             &nbsp;
                                         </a>
                                     </div>
@@ -72,6 +73,7 @@
                         </div>
                     </div>
                 </div>
+                @endforeach
                 <!-- End-->
             </div>
             <!-- End-->

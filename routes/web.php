@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\SliderController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
@@ -18,10 +20,14 @@ use App\Http\Controllers\HomeController;
 Route::get('/', [IndexController::class,'home']);
 Route::get('/dich-vu', [IndexController::class,'dichvu'])->name('dichvu'); // all services
 Route::get('/dich-vu/{slug}', [IndexController::class,'dichvucon'])->name('dichvucon'); // sub service
-Route::get('/danh-muc', [IndexController::class,'danhmuc'])->name('danhmuc'); // all categories
+Route::get('/danh-muc-game/{slug}', [IndexController::class,'danhmuc_game'])->name('danhmucgame'); // all categories
 Route::get('/danh-muc/{slug}', [IndexController::class,'danhmuccon'])->name('danhmuccon'); // all categories
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 // Category
 Route::resource('/category', CategoryController::class);
+// Slider
+Route::resource('/slider', SliderController::class);
+// Blogs
+Route::resource('/blog', BlogController::class);

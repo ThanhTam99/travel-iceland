@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCategoriesTable extends Migration
+class CreateBlogsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,13 @@ class CreateCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('categories', function (Blueprint $table) {
+        Schema::create('blogs', function (Blueprint $table) {
             $table->id();
-            $table->string('title',200);
-            $table->string('slug',255);
-            $table->string('description', 255);
-            $table->string('image', 150);
+            $table->string('title',255);
+            $table->mediumText('description');
+            $table->string('image', 200);
+            $table->longText('content');
             $table->integer('status');
-            $table->integer('order_category')->nullable();
             $table->timestamps();
         });
     }
@@ -32,6 +31,6 @@ class CreateCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categories');
+        Schema::dropIfExists('blogs');
     }
 }

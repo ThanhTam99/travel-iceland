@@ -8,7 +8,7 @@
 <div class="row justify-content-center">
     <div class="col-md-8">
         <div class="card">
-            <div class="card-header">Liet ke danh sach danh muc game</div>
+            <div class="card-header">Them slider</div>
             
             @if ($errors->any()):
                 <div class="alert alert-danger">
@@ -26,16 +26,12 @@
                     {{ session('status') }}
                 </div>
                 @endif
-                <a href="{{route('category.index')}} " class="btn btn-success">Liet ke danh muc</a>
-                <form action="{{route('category.store')}}" method="POST" enctype="multipart/form-data">
+                <a href="{{route('slider.index')}} " class="btn btn-success">Liet ke slider</a>
+                <form action="{{route('slider.store')}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <label>Title</label>
-                        <input type="text" class="form-control" required id="slug" onkeyup="ChangeToSlug();" name="title" placeholder="...">
-                    </div>
-                    <div class="form-group">
-                        <label>Slug</label>
-                        <input type="text" class="form-control" required name="slug" id="convert_slug" placeholder="...">
+                        <input type="text" class="form-control" required name="title" placeholder="...">
                     </div>
                     <div class="form-group">
                         <label>Image</label>

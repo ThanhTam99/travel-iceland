@@ -7,9 +7,9 @@
 @section('content')
 
 <div class="row justify-content-center">
-    <div class="col-md-10">
+    <div class="col-md-8">
         <div class="card">
-            <div class="card-header">Liet ke danh sach danh muc game</div>
+            <div class="card-header">Liet ke sli game</div>
 
             <div class="card-body">
                 @if (session('status'))
@@ -17,13 +17,12 @@
                     {{ session('status') }}
                 </div>
                 @endif
-                <a href="{{route('category.create')}} " class="btn btn-success">Them danh muc game</a>
+                <a href="{{route('slider.create')}} " class="btn btn-success">Them sli game</a>
                 <table class="table table-striped" id="myTable">
                     <thead>
                         <tr>
                             <th>ID</th>
                             <th>Tên danh mục</th>
-                            <th>Slug</th>
                             <th>Mô tả</th>
                             <th>Hiển thị</th>
                             <th>Hình ảnh</th>
@@ -32,33 +31,32 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($category as $key => $cate)
+                        @foreach($slider as $key => $sli)
                         <tr>
                             <th>{{$key}}</th>
-                            <td>{{$cate->title}}</td>
-                            <td>{{$cate->slug}}</td>
-                            <td>{{$cate->description}}</td>
+                            <td>{{$sli->title}}</td>
+                            <td>{{$sli->description}}</td>
                             <td>
-                                @if($cate->status == 0)
-                                Khong hien thi
+                                @if($sli->status == 0)
+                                    Khong hien thi
                                 @else
-                                Hien thi
+                                    Hien thi
                                 @endif
                             </td>
-                            <td><img src="{{asset('uploads/category/'.$cate->image)}}" height="150px" weight="150px"></td>
+                            <td><img src="{{asset('uploads/slider/'.$sli->image)}}" height="150px" weight="150px"></td>
                             <td>
-                                <form action="{{route('category.destroy',$cate->id)}}" method="POST">
+                                <form action="{{route('slider.destroy',$sli->id)}}" method="POST">
                                     @method('DELETE')
                                     @csrf
                                     <button onclick="return confirm('Ban co muon xoa');" class="btn btn-danger">Delete</button>
                                 </form>
-                                <a href="{{route('category.edit',$cate->id)}}" class="btn btn-warning">Sửa</a>
+                                <a href="{{route('slider.edit',$sli->id)}}" class="btn btn-warning">Sửa</a>
                             </td>
                         </tr>
                         @endforeach
                     </tbody>
                 </table>
-                {{$category->links('pagination::bootstrap-4')}}
+                {{$slider->links('pagination::bootstrap-4')}}
             </div>
         </div>
     </div>
